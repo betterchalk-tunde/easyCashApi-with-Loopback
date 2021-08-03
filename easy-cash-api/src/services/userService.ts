@@ -16,13 +16,42 @@ export class UserService {
         return this.userRepo.create(user)
     }
 
-    async updateCash(id:string, balance:number){
-        return this.userRepo.updateById(id, {balance})
+    async updateCash(id: string, balance: number) {
+        var prevBalance: number = 0
+        await this.userRepo.findById(id)
+            .then((user) => {
+                prevBalance = user.balance
+            })
+
+        balance = prevBalance + balance
+        return this.userRepo.updateById(id, { balance })
 
     }
 
-    async transfer(transfer: Transfer){
+    async transfer(transfer: Transfer) {
+        var { senderId, recipientId, sourceAcctId, amount, destAcctId, txnDate, status } = transfer
 
+        const sender = await this.userRepo.findById(senderId)
+        const recipient = await this.userRepo.findById(recipientId)
+
+        if (sender.accounts) {
+            sourceAcctId = sender.accounts[0].bankInfo?.accountNum as string
+        }
+        if (recipient.accounts) {
+            destAcctId = recipient.accounts[0].bankInfo?.accountNum as string
+        }
+
+        sender.balance = sender.balance - amount
+        recipient.balance = recipient.balance + amount
+
+        await this.userRepo.updateById(senderId, { balance: sender.balance })
+        await this.userRepo.updateById(recipientId, { balance: recipient.balance })
+
+        status = "Completed"
+
+        txnDate = new Date().toISOString()
+
+        return this.transferRepo.create({ senderId, recipientId, sourceAcctId, amount, destAcctId, txnDate, status })
     }
-       
+
 }

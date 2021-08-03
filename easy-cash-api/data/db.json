@@ -1,17 +1,21 @@
 {
   "ids": {
-    "Transfer": 1,
+    "Transfer": 3,
     "BankInfo": 1,
     "Account": 1,
-    "User": 3
+    "User": 4
   },
   "models": {
-    "Transfer": {},
+    "Transfer": {
+      "1": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"1199009900\",\"txnDate\":\"2021-08-03T22:15:11.066Z\",\"status\":\"Completed\",\"id\":\"1\"}",
+      "2": "{\"senderId\":\"1\",\"recipientId\":\"3\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"2299009900\",\"txnDate\":\"2021-08-03T22:15:34.642Z\",\"status\":\"Completed\",\"id\":\"2\"}"
+    },
     "BankInfo": {},
     "Account": {},
     "User": {
-      "1": "{\"email\":\"olutunde2gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"002374839322\"}}],\"balance\":90,\"id\":\"1\"}",
-      "2": "{\"email\":\"string\",\"accounts\":[{\"type\":\"string\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"string\"}}],\"balance\":500,\"id\":\"2\"}"
+      "1": "{\"email\":\"olutunde@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"0099009900\"}}],\"balance\":3000,\"id\":\"1\"}",
+      "2": "{\"email\":\"olutunde1@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"1199009900\"}}],\"balance\":5000,\"id\":\"2\"}",
+      "3": "{\"email\":\"olutunde2@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"2299009900\"}}],\"balance\":7000,\"id\":\"3\"}"
     }
   }
 }

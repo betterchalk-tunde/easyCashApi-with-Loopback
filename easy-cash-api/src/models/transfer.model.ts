@@ -12,9 +12,8 @@ export class Transfer extends Entity {
     type: 'string',
     id: true,
     generated: false,
-    required: true,
   })
-  id: string;
+  id?: string;
 
   @property({
     type: 'string',
@@ -24,13 +23,11 @@ export class Transfer extends Entity {
 
   @property({
     type: 'string',
-    required: true,
   })
-  recipientId: string;
+  recipientId?: string;
 
   @property({
     type: 'number',
-    required: true,
   })
   amount: number;
 
