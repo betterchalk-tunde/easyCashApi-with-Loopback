@@ -7,9 +7,8 @@ export class User extends Entity {
     type: 'string',
     id: true,
     generated: false,
-    required: true,
   })
-  id: string;
+  id?: string;
 
   @property({
     type: 'string',
@@ -17,12 +16,8 @@ export class User extends Entity {
   })
   email: string;
 
-  @property({
-    type: 'array',
-    //itemType: 'string', removed this cause i thought the Account array has defined the item types 
-    required: true,
-  })
-  accounts: Account[];
+  @property.array(Account)
+  accounts?: Account[];
 
   @property({
     type: 'number',

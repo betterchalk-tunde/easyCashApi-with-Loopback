@@ -1,1 +1,17 @@
-{}
+{
+  "ids": {
+    "Transfer": 1,
+    "BankInfo": 1,
+    "Account": 1,
+    "User": 3
+  },
+  "models": {
+    "Transfer": {},
+    "BankInfo": {},
+    "Account": {},
+    "User": {
+      "1": "{\"email\":\"olutunde2gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"002374839322\"}}],\"balance\":90,\"id\":\"1\"}",
+      "2": "{\"email\":\"string\",\"accounts\":[{\"type\":\"string\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"string\"}}],\"balance\":500,\"id\":\"2\"}"
+    }
+  }
+}

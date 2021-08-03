@@ -5,7 +5,7 @@ const config = {
   name: 'db',
   connector: 'memory',
   localStorage: '',
-  file: ''
+  file: './data/db.json'
 };
 
 // Observe application's life cycle to disconnect the datasource when

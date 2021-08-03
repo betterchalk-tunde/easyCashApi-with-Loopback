@@ -1,38 +1,35 @@
 import { Entity, model, property } from '@loopback/repository';
 
 enum AccountTypes {
-  Bank = "Bank",
-  Cash = "Cash",
-  CreditCard = "credit card"
+  BANK = "Bank",
+  CASH = "Cash",
+  CREDITCARD = "credit card"
 }
+
+@model()
+class BankInfo{
+  @property()
+  bankName: "string"
+  @property()
+  accountNum: "string"
+}
+
 @model()
 export class Account extends Entity {
   @property({
     type: 'string',
-    id: true,
-    generated: false,
-    required: true,
   })
   id: string;
 
   @property({
-    type: 'string',
-    required: true,
-    jsonSchema: {
-      enum: Object.values(AccountTypes)
-    }
+    required: false,
   })
-  type: string;
+  type?: AccountTypes;
 
   @property({
-    type: 'object',
-    required: true,
-    properties: {
-      bankName: "string",
-      accountNum: "string"
-    }
+    type: BankInfo
   })
-  bankInfo: object;
+  bankInfo?: BankInfo
 
 
   constructor(data?: Partial<Account>) {
