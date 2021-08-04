@@ -41,9 +41,13 @@ export class UserService {
         if (sender.balance > amount) {
             if (sender.accounts) {
                 sourceAcctId = sender.accounts[0].bankInfo?.accountNum as string
+            } else {
+                throw new Error('No Account found for this user')
             }
             if (recipient.accounts) {
                 destAcctId = recipient.accounts[0].bankInfo?.accountNum as string
+            } else {
+                throw new Error('Recipient with this id does not have an account')
             }
 
             sender.balance = sender.balance - amount

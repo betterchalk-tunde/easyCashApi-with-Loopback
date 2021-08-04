@@ -50,7 +50,7 @@ export class TransferController {
       return response.status(200).send(await this.userService.transfer(transfer));
     } catch (error) {
       return response.status(400).send({
-        "error":{
+        "error": {
           "statusCode": 404,
           "name": "Error",
           "message": `${error}`
