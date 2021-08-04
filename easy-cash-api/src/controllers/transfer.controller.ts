@@ -51,7 +51,7 @@ export class TransferController {
     } catch (error) {
       return response.status(400).send({
         "error": {
-          "statusCode": 404,
+          "statusCode": 403,
           "name": "Error",
           "message": `${error}`
         }
