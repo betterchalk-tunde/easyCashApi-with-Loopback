@@ -2,6 +2,7 @@ import { repository } from '@loopback/repository';
 import { Transfer, User } from '../models';
 import { UserRepository } from '../repositories';
 import { TransferRepository } from '../repositories'
+import { TranStatus } from '../models'
 
 export class UserService {
     constructor(
@@ -34,6 +35,7 @@ export class UserService {
         const sender = await this.userRepo.findById(senderId)
         const recipient = await this.userRepo.findById(recipientId)
 
+
         if (sender.accounts) {
             sourceAcctId = sender.accounts[0].bankInfo?.accountNum as string
         }
@@ -47,11 +49,11 @@ export class UserService {
         await this.userRepo.updateById(senderId, { balance: sender.balance })
         await this.userRepo.updateById(recipientId, { balance: recipient.balance })
 
-        status = "Completed"
+        status = TranStatus.Completed
 
         txnDate = new Date().toISOString()
 
         return this.transferRepo.create({ senderId, recipientId, sourceAcctId, amount, destAcctId, txnDate, status })
-    }
 
+    }
 }

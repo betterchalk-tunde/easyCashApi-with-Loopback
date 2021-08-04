@@ -1,7 +1,7 @@
 import { Entity, model, property } from '@loopback/repository';
 
 
-enum TranStatus {
+export enum TranStatus {
   Pending = "Pending",
   Completed = "Completed",
   Failed = "Failed"
