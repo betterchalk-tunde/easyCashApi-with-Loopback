@@ -9,7 +9,9 @@ import {
   getModelSchemaRef,
   requestBody,
   response,
-  param
+  param,
+  RestBindings,
+  RequestContext
 } from '@loopback/rest';
 import { Transfer } from '../models';
 import { TransferRepository } from '../repositories';
@@ -21,6 +23,8 @@ export class TransferController {
     public userService: UserService,
     @repository(TransferRepository)
     public transferRepository: TransferRepository,
+    @inject(RestBindings.Http.CONTEXT)
+    private requestCtx: RequestContext
   ) { }
 
   @post('/api/transfer')
@@ -40,8 +44,21 @@ export class TransferController {
       },
     })
     transfer: Omit<Transfer, 'id'>,
-  ): Promise<Transfer> {
-    return this.userService.transfer(transfer);
+  ) {
+    const { response } = this.requestCtx
+    try {
+      return response.status(200).send(await this.userService.transfer(transfer));
+    } catch (error) {
+      return response.status(400).send({
+        "error":{
+          "statusCode": 404,
+          "name": "Error",
+          "message": `${error}`
+        }
+      })
+    }
+
+
   }
 
   @get('/transfers')

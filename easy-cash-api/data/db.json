@@ -1,6 +1,6 @@
 {
   "ids": {
-    "Transfer": 4,
+    "Transfer": 5,
     "BankInfo": 1,
     "Account": 1,
     "User": 4
@@ -9,13 +9,14 @@
     "Transfer": {
       "1": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"1199009900\",\"txnDate\":\"2021-08-03T22:15:11.066Z\",\"status\":\"Completed\",\"id\":\"1\"}",
       "2": "{\"senderId\":\"1\",\"recipientId\":\"3\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"2299009900\",\"txnDate\":\"2021-08-03T22:15:34.642Z\",\"status\":\"Completed\",\"id\":\"2\"}",
-      "3": "{\"senderId\":\"2\",\"recipientId\":\"3\",\"amount\":500,\"sourceAcctId\":\"1199009900\",\"destAcctId\":\"2299009900\",\"txnDate\":\"2021-08-04T11:26:35.263Z\",\"status\":\"Completed\",\"id\":\"3\"}"
+      "3": "{\"senderId\":\"2\",\"recipientId\":\"3\",\"amount\":500,\"sourceAcctId\":\"1199009900\",\"destAcctId\":\"2299009900\",\"txnDate\":\"2021-08-04T11:26:35.263Z\",\"status\":\"Completed\",\"id\":\"3\"}",
+      "4": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"1199009900\",\"txnDate\":\"2021-08-04T13:28:17.717Z\",\"status\":\"Completed\",\"id\":\"4\"}"
     },
     "BankInfo": {},
     "Account": {},
     "User": {
-      "1": "{\"email\":\"olutunde@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"0099009900\"}}],\"balance\":3000,\"id\":\"1\"}",
-      "2": "{\"email\":\"olutunde1@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"1199009900\"}}],\"balance\":4500,\"id\":\"2\"}",
+      "1": "{\"email\":\"olutunde@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"0099009900\"}}],\"balance\":2000,\"id\":\"1\"}",
+      "2": "{\"email\":\"olutunde1@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"1199009900\"}}],\"balance\":5500,\"id\":\"2\"}",
       "3": "{\"email\":\"olutunde2@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"2299009900\"}}],\"balance\":7500,\"id\":\"3\"}"
     }
   }
