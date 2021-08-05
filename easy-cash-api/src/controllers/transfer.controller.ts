@@ -1,4 +1,5 @@
 import { inject } from '@loopback/core';
+import { authenticate } from '@loopback/authentication';
 import {
   Filter,
   repository,
@@ -10,21 +11,19 @@ import {
   requestBody,
   response,
   param,
-  RestBindings,
-  RequestContext
 } from '@loopback/rest';
 import { Transfer } from '../models';
 import { TransferRepository } from '../repositories';
 import { UserService } from '../services/userService';
 
+
+// @authenticate('jwt')
 export class TransferController {
   constructor(
     @inject("userService")
     public userService: UserService,
     @repository(TransferRepository)
-    public transferRepository: TransferRepository,
-    @inject(RestBindings.Http.CONTEXT)
-    private requestCtx: RequestContext
+    public transferRepository: TransferRepository
   ) { }
 
   @post('/api/transfer')
@@ -44,21 +43,8 @@ export class TransferController {
       },
     })
     transfer: Omit<Transfer, 'id'>,
-  ) {
-    const { response } = this.requestCtx
-    try {
-      return response.status(200).send(await this.userService.transfer(transfer));
-    } catch (error) {
-      return response.status(400).send({
-        "error": {
-          "statusCode": 403,
-          "name": "Error",
-          "message": `${error}`
-        }
-      })
-    }
-
-
+  ): Promise<Transfer> {
+    return await this.userService.transfer(transfer);
   }
 
   @get('/transfers')

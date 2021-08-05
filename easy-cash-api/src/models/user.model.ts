@@ -16,6 +16,12 @@ export class User extends Entity {
   })
   email: string;
 
+  @property()
+  emailVerified?: boolean;
+  
+  @property()
+  verificationToken?: string;
+
   @property.array(Account)
   accounts?: Account[];
 
@@ -24,6 +30,12 @@ export class User extends Entity {
     required: true,
   })
   balance: number;
+
+  @property({
+    type: 'string',
+    required: true
+  })
+  password: string;
 
 
   constructor(data?: Partial<User>) {

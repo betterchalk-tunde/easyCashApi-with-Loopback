@@ -1,23 +1,20 @@
 {
   "ids": {
-    "Transfer": 5,
+    "Transfer": 2,
     "BankInfo": 1,
     "Account": 1,
     "User": 4
   },
   "models": {
     "Transfer": {
-      "1": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"1199009900\",\"txnDate\":\"2021-08-03T22:15:11.066Z\",\"status\":\"Completed\",\"id\":\"1\"}",
-      "2": "{\"senderId\":\"1\",\"recipientId\":\"3\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"2299009900\",\"txnDate\":\"2021-08-03T22:15:34.642Z\",\"status\":\"Completed\",\"id\":\"2\"}",
-      "3": "{\"senderId\":\"2\",\"recipientId\":\"3\",\"amount\":500,\"sourceAcctId\":\"1199009900\",\"destAcctId\":\"2299009900\",\"txnDate\":\"2021-08-04T11:26:35.263Z\",\"status\":\"Completed\",\"id\":\"3\"}",
-      "4": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":1000,\"sourceAcctId\":\"0099009900\",\"destAcctId\":\"1199009900\",\"txnDate\":\"2021-08-04T13:28:17.717Z\",\"status\":\"Completed\",\"id\":\"4\"}"
+      "1": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":3000,\"sourceAcctId\":\"0030456078\",\"destAcctId\":\"0030456078\",\"txnDate\":\"2021-08-05T09:27:00.577Z\",\"status\":\"Completed\",\"id\":\"1\"}"
     },
     "BankInfo": {},
     "Account": {},
     "User": {
-      "1": "{\"email\":\"olutunde@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"0099009900\"}}],\"balance\":2000,\"id\":\"1\"}",
-      "2": "{\"email\":\"olutunde1@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"1199009900\"}}],\"balance\":5500,\"id\":\"2\"}",
-      "3": "{\"email\":\"olutunde2@gmail.com\",\"accounts\":[{\"type\":\"Bank\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"2299009900\"}}],\"balance\":7500,\"id\":\"3\"}"
+      "1": "{\"email\":\"olutunde1@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"string\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":2000,\"password\":\"$2a$10$XaTaX3zuXsa4CG/qF/GXS.MbPbUrZggFqNiUfjBXAeV0NfhU3NmIa\",\"id\":\"1\"}",
+      "2": "{\"email\":\"olutunde2@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"string\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":8000,\"password\":\"$2a$10$QVSf.B2ik0SRojrV1/6iueWaqFyNtM.mMMlfruJFO0FVeqT1FFfnm\",\"id\":\"2\"}",
+      "3": "{\"id\":\"3\",\"email\":\"olutunde3@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJlbWFpbCI6Im9sdXR1bmRlM0BnbWFpbC5jb20iLCJpYXQiOjE2MjgxNTU1NTYsImV4cCI6MTYyODE3NzE1Nn0.--WieZkHqBxNMtDtmUC7YeAXVKdzPduReuVqgk1k4_E\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":5000,\"password\":\"$2a$10$pKXg6DOys5mUAm6D8Q26DOvXoE4OiL2SKcONrsCU9xDg3tOamfE3W\"}"
     }
   }
 }
