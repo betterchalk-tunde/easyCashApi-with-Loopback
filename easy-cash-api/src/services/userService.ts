@@ -1,5 +1,5 @@
 import { repository } from '@loopback/repository';
-import { Login, Transfer, User } from '../models';
+import { Transfer, User } from '../models';
 import { UserRepository } from '../repositories';
 import { TransferRepository } from '../repositories'
 import { TranStatus } from '../models'
@@ -20,6 +20,7 @@ export class UserService {
 
     }
 
+
     async createUser(user: User): Promise<User> {
         const userFound = await this.userRepo.findOne({
             where: { email: user.email.toLowerCase() }
@@ -37,12 +38,6 @@ export class UserService {
         const user = await this.userRepo.findById(id)
         user.balance += balance
         await this.userRepo.save(user)
-    }
-
-    async updateToken(user : User, token:string){
-        const userToUpdate = await this.userRepo.findById(user.id)
-        userToUpdate.verificationToken = token
-        await this.userRepo.save(userToUpdate)
     }
 
 
@@ -82,7 +77,7 @@ export class UserService {
 
     }
 
-    async verifyCredentials({ email, password }: Login): Promise<User> {
+    async verifyCredentials({ email, password }: User): Promise<User> {
         const foundUser = await this.userRepo.findOne({
             where: { email: email.toLowerCase().trim() },
         })

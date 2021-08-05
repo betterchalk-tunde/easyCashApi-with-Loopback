@@ -16,7 +16,7 @@ import {
   requestBody,
   response,
 } from '@loopback/rest';
-import { Login, User } from '../models';
+import {  User } from '../models';
 import { UserRepository } from '../repositories';
 import { UserService } from '../services/userService';
 
@@ -72,21 +72,21 @@ export class UserController {
     @requestBody({
       content: {
         'application/json': {
-          schema: getModelSchemaRef(Login)
+          schema: getModelSchemaRef(User,{
+            exclude: ['id','emailVerified', 'accounts', 'balance']
+          })
         },
       },
-    }) login: Login
+    }) user: User
   ): Promise<{ token: string }> {
-    const user = await this.userService.verifyCredentials(login)
+    const verifiedUser = await this.userService.verifyCredentials(user)
 
-    const userProfile = this.userService.convertToUserProfile(user)
+    const userProfile = this.userService.convertToUserProfile(verifiedUser)
 
     const token = await this.jwtService.generateToken(userProfile);
-    
-    await this.userService.updateToken(user, token)
+      
     return { token };
   }
-
 
   @get('/api/users')
   @response(200, {

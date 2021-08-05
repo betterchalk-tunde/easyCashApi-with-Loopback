@@ -18,9 +18,6 @@ export class User extends Entity {
 
   @property()
   emailVerified?: boolean;
-  
-  @property()
-  verificationToken?: string;
 
   @property.array(Account)
   accounts?: Account[];
@@ -42,7 +39,6 @@ export class User extends Entity {
     super(data);
   }
 }
-
 
 
 export interface UserRelations {

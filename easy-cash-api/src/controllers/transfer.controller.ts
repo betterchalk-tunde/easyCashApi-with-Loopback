@@ -17,7 +17,7 @@ import { TransferRepository } from '../repositories';
 import { UserService } from '../services/userService';
 
 
-// @authenticate('jwt')
+@authenticate('jwt')
 export class TransferController {
   constructor(
     @inject("userService")

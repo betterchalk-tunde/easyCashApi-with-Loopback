@@ -1,20 +1,27 @@
 {
   "ids": {
-    "Transfer": 2,
+    "Transfer": 6,
     "BankInfo": 1,
     "Account": 1,
-    "User": 4
+    "User": 7
   },
   "models": {
     "Transfer": {
-      "1": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":3000,\"sourceAcctId\":\"0030456078\",\"destAcctId\":\"0030456078\",\"txnDate\":\"2021-08-05T09:27:00.577Z\",\"status\":\"Completed\",\"id\":\"1\"}"
+      "1": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":3000,\"sourceAcctId\":\"0030456078\",\"destAcctId\":\"0030456078\",\"txnDate\":\"2021-08-05T09:27:00.577Z\",\"status\":\"Completed\",\"id\":\"1\"}",
+      "2": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":1200,\"sourceAcctId\":\"0030456078\",\"destAcctId\":\"0030456078\",\"txnDate\":\"2021-08-05T09:55:00.926Z\",\"status\":\"Completed\",\"id\":\"2\"}",
+      "3": "{\"senderId\":\"1\",\"recipientId\":\"2\",\"amount\":200,\"sourceAcctId\":\"0030456078\",\"destAcctId\":\"0030456078\",\"txnDate\":\"2021-08-05T10:12:41.097Z\",\"status\":\"Completed\",\"id\":\"3\"}",
+      "4": "{\"senderId\":\"4\",\"recipientId\":\"5\",\"amount\":500,\"sourceAcctId\":\"string\",\"destAcctId\":\"string\",\"txnDate\":\"2021-08-05T13:44:53.249Z\",\"status\":\"Completed\",\"id\":\"4\"}",
+      "5": "{\"senderId\":\"4\",\"recipientId\":\"5\",\"amount\":500,\"sourceAcctId\":\"string\",\"destAcctId\":\"string\",\"txnDate\":\"2021-08-05T13:49:23.804Z\",\"status\":\"Completed\",\"id\":\"5\"}"
     },
     "BankInfo": {},
     "Account": {},
     "User": {
-      "1": "{\"email\":\"olutunde1@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"string\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":2000,\"password\":\"$2a$10$XaTaX3zuXsa4CG/qF/GXS.MbPbUrZggFqNiUfjBXAeV0NfhU3NmIa\",\"id\":\"1\"}",
-      "2": "{\"email\":\"olutunde2@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"string\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":8000,\"password\":\"$2a$10$QVSf.B2ik0SRojrV1/6iueWaqFyNtM.mMMlfruJFO0FVeqT1FFfnm\",\"id\":\"2\"}",
-      "3": "{\"id\":\"3\",\"email\":\"olutunde3@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJlbWFpbCI6Im9sdXR1bmRlM0BnbWFpbC5jb20iLCJpYXQiOjE2MjgxNTU1NTYsImV4cCI6MTYyODE3NzE1Nn0.--WieZkHqBxNMtDtmUC7YeAXVKdzPduReuVqgk1k4_E\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":5000,\"password\":\"$2a$10$pKXg6DOys5mUAm6D8Q26DOvXoE4OiL2SKcONrsCU9xDg3tOamfE3W\"}"
+      "1": "{\"id\":\"1\",\"email\":\"olutunde1@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6Im9sdXR1bmRlMUBnbWFpbC5jb20iLCJpYXQiOjE2MjgxNTcyNzAsImV4cCI6MTYyODE3ODg3MH0.Ahv3m3-otUzLOVwth-zNUmPHr-Heo78tH1S_ColfvXY\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":600,\"password\":\"$2a$10$XaTaX3zuXsa4CG/qF/GXS.MbPbUrZggFqNiUfjBXAeV0NfhU3NmIa\"}",
+      "2": "{\"email\":\"olutunde2@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"string\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":9400,\"password\":\"$2a$10$QVSf.B2ik0SRojrV1/6iueWaqFyNtM.mMMlfruJFO0FVeqT1FFfnm\",\"id\":\"2\"}",
+      "3": "{\"id\":\"3\",\"email\":\"olutunde3@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJlbWFpbCI6Im9sdXR1bmRlM0BnbWFpbC5jb20iLCJpYXQiOjE2MjgxNTU1NTYsImV4cCI6MTYyODE3NzE1Nn0.--WieZkHqBxNMtDtmUC7YeAXVKdzPduReuVqgk1k4_E\",\"accounts\":[{\"type\":\"Cash\",\"bankInfo\":{\"bankName\":\"GTB\",\"accountNum\":\"0030456078\"}}],\"balance\":5000,\"password\":\"$2a$10$pKXg6DOys5mUAm6D8Q26DOvXoE4OiL2SKcONrsCU9xDg3tOamfE3W\"}",
+      "4": "{\"id\":\"4\",\"email\":\"olayeni@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQiLCJlbWFpbCI6Im9sYXllbmlAZ21haWwuY29tIiwiaWF0IjoxNjI4MTcwOTU4LCJleHAiOjE2MjgxOTI1NTh9.SNsy8sPsoyAGDdqx--jxIHm8LtUsE-VlkSkB8eWuq1Q\",\"accounts\":[{\"type\":\"string\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"string\"}}],\"balance\":4000,\"password\":\"$2a$10$IYuITlwoLRJSecMY/iojDu8gwePQWM.ytpKRF5HqaGc1YLdHMNOwa\"}",
+      "5": "{\"id\":\"5\",\"email\":\"tunde@gmail.com\",\"emailVerified\":true,\"verificationToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUiLCJlbWFpbCI6InR1bmRlQGdtYWlsLmNvbSIsImlhdCI6MTYyODE3MTA0NCwiZXhwIjoxNjI4MTkyNjQ0fQ.RIRC86kBwzjgJne9TE9aIGO049_vdWGH1MecdPpSN0U\",\"accounts\":[{\"type\":\"string\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"string\"}}],\"balance\":1000,\"password\":\"$2a$10$Ijx1RcleJw9Se3DNAY1Yzeibp70Nwv9GxZfMqjTzZVp7AobN7Dske\"}",
+      "6": "{\"email\":\"tunde1@gmail.com\",\"emailVerified\":true,\"accounts\":[{\"type\":\"string\",\"bankInfo\":{\"bankName\":\"string\",\"accountNum\":\"string\"}}],\"balance\":0,\"password\":\"$2a$10$4AzmdI3/bbnKjlCW5WHSIuyVuUTgFCskywLST5OXuVMKsL0Qoi8za\",\"id\":\"6\"}"
     }
   }
 }
